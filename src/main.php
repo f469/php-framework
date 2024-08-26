@@ -7,9 +7,6 @@ use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
-use App\Controller\HelloController;
-use App\Pages\Renderer;
-use App\Controller\FormController;
 use App\Controller\ByeController;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
@@ -18,15 +15,11 @@ $request = Request::createFromGlobals();
 
 $routes = new RouteCollection();
 
-$routes->add('hello', new Route('/hello', [
-    '_controller' => 'App\Controller\HelloController::index'
-]));
-$routes->add('form', new Route('/form', [
-    '_controller' => 'App\Controller\FormController::index'
-]));
-$routes->add('bye', new Route('/bye', [
-    '_controller' => 'App\Controller\ByeController::index'
-]));
+foreach ($routesDefinition as $route) {
+    $routes->add($route['name'], new Route($route['path'], [
+        '_controller' => $route['controller']
+    ]));
+}
 
 $context = new RequestContext();
 $context->fromRequest($request);
