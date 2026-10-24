@@ -17,7 +17,7 @@ $routes = new RouteCollection();
 
 foreach ($routesDefinition as $route) {
     $routes->add($route['name'], new Route($route['path'], [
-        '_controller' => $route['controller']
+        '_controller' => $route['controller'],
     ]));
 }
 
