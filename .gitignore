@@ -2,3 +2,6 @@
 .php-cs-fixer.cache
 # PHP CS Fixer configuration
 /.php-cs-fixer.php
+
+# Lock file is not committed
+/composer.lock
