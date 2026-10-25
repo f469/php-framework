@@ -3,3 +3,6 @@ coding-standard: vendor
 
 unit-tests: vendor
 	vendor/bin/phpunit tests
+
+serve: vendor
+	symfony server:start
