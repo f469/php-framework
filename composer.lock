@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c57377e01f4f5202df150deade3b328a",
+    "content-hash": "b0916f2273fee07842491fad31e3af76",
     "packages": [
         {
             "name": "psr/event-dispatcher",
@@ -5144,7 +5144,9 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "php": ">=8.4.1"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
 }

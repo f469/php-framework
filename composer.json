@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": ">=8.4.1",
         "symfony/http-foundation": "^7.4",
         "symfony/routing": "^7.4",
         "symfony/http-kernel": "^7.4"
