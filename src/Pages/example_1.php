@@ -8,6 +8,6 @@
     <button type="submit">Send</button>
 </form>
 
-User : <?php echo $request->get('user_name') ?? '...' ?>
+User : <?= htmlspecialchars((string) ($request->get('user_name') ?? '...'), ENT_QUOTES, 'UTF-8') ?>
 <br>
-Id :  <?php echo $request->get('user_id') ?? '...' ?>
+Id :  <?= htmlspecialchars((string) ($request->get('user_id') ?? '...'), ENT_QUOTES, 'UTF-8') ?>
